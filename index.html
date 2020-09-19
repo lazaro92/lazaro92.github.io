@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Albert Lazaro de Lara s' blog &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href=/assets/css/styles.css>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href=/assets/css/main.css>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href=/assets/apple-touch-icon-precomposed.png>
+  <link rel="shortcut icon" href=/assets/favicon.ico>
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Albert Lazaro de Lara s&#39; blog" href="/feed.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Albert Lazaro's personal blog about his personal projects</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href=/><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
+    <a class="sidebar-nav-item" href=/about/><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; About</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2020. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href=/ title="Home">Albert Lazaro de Lara s' blog</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://localhost:4000/summer-2020-project-ray-tracer">
+        Summer 2020 project: Raytracing!
+      </a>
+    </h1>
+
+    <span class="post-date">15 Aug 2020</span>
+
+    <p>This summer I have implemented a basic <em>Raytracer</em> as my little project for one week, in order to improve my knowledge on C++ language, start this blog and show my programming skills. Also, I have to say that I’m interested in the Computer Graphics branch of Computer Science.</p>
+
+<p>Ray tracing is a technique that consists in tracing a path from an imaginary eye through each pixel in a virtual screen and calculating the color of the object visible through it. So in the end an image of a three-dimensional scene is generated. This technique is used in the film industry to generate film visual effects (VFX).</p>
+
+<p>So, in order to do the project I have followed the book <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">Ray Tracing in One Weekend</a> from Peter Shirley, that explains in an easy way, how to program a ray tracer without going deeper in the math behind it, making it easier to understand the process to generate an image. In addition, I have checked out the page <a href="https://www.scratchapixel.com/">Scratch a pixel</a> in order to go deeper in some parts.</p>
+
+<p>In summary, I have done the next steps:</p>
+<ul>
+  <li>Create the classes for representing rays, vectors, materials, objects, the camera…</li>
+  <li>Added some objects, in this case spheres, with different colors and materials.</li>
+  <li>Added shading using the surface normals that are calculated when a ray hits an object.</li>
+  <li>Implemented an anti-aliasing technique which, for a given pixel, the program randomly takes several samples of the pixel and sends rays through these samples. The colors of these rays are then averaged. With this computation, the edges of the objects are blended.</li>
+  <li>Implemented different materials: diffuse, metal and dielectrics.</li>
+  <li>A positionable camera.</li>
+</ul>
+
+<p><img src="/assets/ray_tracing.png" alt="Result of the project" class="center-image" /></p>
+
+<p>I will continue with this project adding more objects (like planes, cubes…), adding lights and reading the next book.</p>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
