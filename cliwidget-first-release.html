@@ -11,7 +11,7 @@
 
   <title>
     
-      Albert Lazaro's blog &middot; 
+      CliWidget first release &middot; Albert Lazaro's blog
     
   </title>
 
@@ -67,18 +67,10 @@
       </div>
 
       <div class="container content">
-        <div class="posts">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="https://lazaro92.github.io/cliwidget-first-release">
-        CliWidget first release
-      </a>
-    </h1>
-
-    <span class="post-date">25 Sep 2020</span>
-
-    <p>This month I have been working on a project in order to put in practice the knowledge that I acquired during the lockdown. I didn’t want to do the typical project to print the lines of a ticket, implement the management of a library and the users that borrow books or other typical examples of beginner projects. I was thinking about make something more useful and then, after some time, I thought about the idea of making a library of UI widgets for the terminal.</p>
+        <div class="post">
+  <h1 class="post-title">CliWidget first release</h1>
+  <span class="post-date">25 Sep 2020</span>
+  <p>This month I have been working on a project in order to put in practice the knowledge that I acquired during the lockdown. I didn’t want to do the typical project to print the lines of a ticket, implement the management of a library and the users that borrow books or other typical examples of beginner projects. I was thinking about make something more useful and then, after some time, I thought about the idea of making a library of UI widgets for the terminal.</p>
 
 <h2 id="cliwidget-what-is-this">CliWidget, what is this?</h2>
 
@@ -130,48 +122,43 @@
 
 <p>You can check the project in its <a href="https://github.com/lazaro92/CliWidget/">Github repository</a>.</p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="https://lazaro92.github.io/summer-2020-project-ray-tracer">
-        Summer 2020 project: Raytracing!
-      </a>
-    </h1>
-
-    <span class="post-date">15 Aug 2020</span>
-
-    <p>This summer I have implemented a basic <em>Raytracer</em> as my little project for one week, in order to improve my knowledge on C++ language, start this blog and show my programming skills. Also, I have to say that I’m interested in the Computer Graphics branch of Computer Science.</p>
-
-<p>Ray tracing is a technique that consists in tracing a path from an imaginary eye through each pixel in a virtual screen and calculating the color of the object visible through it. So in the end an image of a three-dimensional scene is generated. This technique is used in the film industry to generate film visual effects (VFX).</p>
-
-<p>So, in order to do the project I have followed the book <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">Ray Tracing in One Weekend</a> from Peter Shirley, that explains in an easy way, how to program a ray tracer without going deeper in the math behind it, making it easier to understand the process to generate an image. In addition, I have checked out the page <a href="https://www.scratchapixel.com/">Scratch a pixel</a> in order to go deeper in some parts.</p>
-
-<p>In summary, I have done the next steps:</p>
-<ul>
-  <li>Create the classes for representing rays, vectors, materials, objects, the camera…</li>
-  <li>Added some objects, in this case spheres, with different colors and materials.</li>
-  <li>Added shading using the surface normals that are calculated when a ray hits an object.</li>
-  <li>Implemented an anti-aliasing technique which, for a given pixel, the program randomly takes several samples of the pixel and sends rays through these samples. The colors of these rays are then averaged. With this computation, the edges of the objects are blended.</li>
-  <li>Implemented different materials: diffuse, metal and dielectrics.</li>
-  <li>A positionable camera.</li>
-</ul>
-
-<p><img src="/assets/ray_tracing.png" alt="Result of the project" class="center-image" /></p>
-
-<p>I will continue with this project adding more objects (like planes, cubes…), adding lights and reading the next book.</p>
-
-  </div>
-  
 </div>
 
-<div class="pagination">
+
   
-    <span class="pagination-item older">Older</span>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://lazaro92.github.io/cliwidget-first-release';
+      this.page.identifier = 'https://lazaro92.github.io/cliwidget-first-release';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://albert-lazaro-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/summer-2020-project-ray-tracer">
+            Summer 2020 project: Raytracing!
+            <small>15 Aug 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
 </div>
 
       </div>
