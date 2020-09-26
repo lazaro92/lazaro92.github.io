@@ -44,6 +44,8 @@
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item" href=/><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
     <a class="sidebar-nav-item" href=/about.html><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; About</a>
+    <a class="sidebar-nav-item" href=/categories><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp; Categories</a>
+    <a class="sidebar-nav-item" href=/tags><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp; Tags</a>
   </nav>
 
   <div class="sidebar-item">
@@ -76,60 +78,23 @@
       </a>
     </h1>
 
-    <span class="post-date">25 Sep 2020</span>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 25 Sep 2020</span>
+
+    <ul class="tags">
+        
+        <li><a class="tag" href="tags/#C++">C++</a></li>
+        
+        <li><a class="tag" href="tags/#library">library</a></li>
+        
+        <li><a class="tag" href="tags/#widget">widget</a></li>
+        
+    </ul>
 
     <p>This month I have been working on a project in order to put in practice the knowledge that I acquired during the lockdown. I didn’t want to do the typical project to print the lines of a ticket, implement the management of a library and the users that borrow books or other typical examples of beginner projects. I was thinking about make something more useful and then, after some time, I thought about the idea of making a library of UI widgets for the terminal.</p>
 
-<h2 id="cliwidget-what-is-this">CliWidget, what is this?</h2>
 
-<p><strong>CliWidget</strong> is a library that comes with some widgets to help developers to make better UI’s for their terminal programs and focus on their development instead of making them the UI. This library comes with four widgets for the moment:</p>
 
-<ul>
-  <li><strong>Text:</strong> A simple text class for displaying text in the terminal. Additionally, you can add some format to the text like underline, bold, blink, foreground color, background color…</li>
-</ul>
-
-<p><img src="https://i.imgur.com/jjiLuHP.gif" alt="Text widget gif" title="Text widget gif" class="center-image" /></p>
-
-<ul>
-  <li><strong>InputPassword:</strong> A class that creates a password input. The input works like when a password is introduced in Linux terminal: it hides the user input from the terminal so others cannot view what the user is typing. Also you can add a regular expression (regex) and call the function <code class="highlighter-rouge">validate()</code> to validate if the password passes the regex.</li>
-</ul>
-
-<p><img src="https://i.imgur.com/PMTMMso.gif" alt="Input Password gif" title="Input Password gif" class="center-image" /></p>
-
-<ul>
-  <li><strong>Select:</strong> This class is designed as a menu. The options (a vector of strings) are passed through the constructor and then, when the menu is displayed, the user can select one option of all.</li>
-</ul>
-
-<p><img src="https://i.imgur.com/Caki9XJ.gif" alt="Select gif" title="Select" class="center-image" /></p>
-
-<ul>
-  <li><strong>MultiSelect:</strong> This class is like the <em>Select</em> class, but the difference is that users can choose none or more than one option, selecting or deselecting them with the space bar.</li>
-</ul>
-
-<p><img src="https://i.imgur.com/cbQuZmo.gif" alt="MultiSelect gif" title="MultiSelect" class="center-image" /></p>
-
-<h2 id="how-does-it-works">How does it works?</h2>
-
-<p>The library makes use of the <a href="http://ascii-table.com/ansi-escape-sequences.php">ANSI scape sequences</a> to add the format to the texts and to display background colors and foreground colors. Also it executes the commands <code class="highlighter-rouge">stty</code> and <code class="highlighter-rouge">tput</code> for hiding the input and the cursor of the terminal respectively and later reset it to its original state.</p>
-
-<p>The structure of the project is like in the image:</p>
-
-<p><img src="/assets/cliWidget_scheme.png" alt="Diagram of classes" title="Diagram of classes" class="center-image" /></p>
-
-<p>Every widget has its own class, for the moment, Select and MultiSelect inherit the List class behavior, class that is not implementable. The colorsEnum file represents the Enums of background colors and foreground colors, it has not a cpp file, only a header.</p>
-
-<p>In the future I will add a root class that will have the common attributes and functions and the widgets classes will inherit from it.</p>
-
-<h2 id="future-improvements">Future improvements</h2>
-
-<p>For the moment, the library only works in Linux, I haven’t tested it in Windows OS and MacOS. So the next steps are to make it portable to other platforms and correct bugs that are or will appear or that are reported.</p>
-
-<p>Meanwhile, I will be thinking of other possible widgets that can help other developers.</p>
-
-<h2 id="links">Links</h2>
-
-<p>You can check the project in its <a href="https://github.com/lazaro92/CliWidget/">Github repository</a>.</p>
-
+    <p><a href="https://lazaro92.github.io/cliwidget-first-release">Read more...</a></p>
   </div>
   
   <div class="post">
@@ -139,28 +104,21 @@
       </a>
     </h1>
 
-    <span class="post-date">15 Aug 2020</span>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 15 Aug 2020</span>
+
+    <ul class="tags">
+        
+        <li><a class="tag" href="tags/#C++">C++</a></li>
+        
+        <li><a class="tag" href="tags/#raytracing">raytracing</a></li>
+        
+    </ul>
 
     <p>This summer I have implemented a basic <em>Raytracer</em> as my little project for one week, in order to improve my knowledge on C++ language, start this blog and show my programming skills. Also, I have to say that I’m interested in the Computer Graphics branch of Computer Science.</p>
 
-<p>Ray tracing is a technique that consists in tracing a path from an imaginary eye through each pixel in a virtual screen and calculating the color of the object visible through it. So in the end an image of a three-dimensional scene is generated. This technique is used in the film industry to generate film visual effects (VFX).</p>
 
-<p>So, in order to do the project I have followed the book <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">Ray Tracing in One Weekend</a> from Peter Shirley, that explains in an easy way, how to program a ray tracer without going deeper in the math behind it, making it easier to understand the process to generate an image. In addition, I have checked out the page <a href="https://www.scratchapixel.com/">Scratch a pixel</a> in order to go deeper in some parts.</p>
 
-<p>In summary, I have done the next steps:</p>
-<ul>
-  <li>Create the classes for representing rays, vectors, materials, objects, the camera…</li>
-  <li>Added some objects, in this case spheres, with different colors and materials.</li>
-  <li>Added shading using the surface normals that are calculated when a ray hits an object.</li>
-  <li>Implemented an anti-aliasing technique which, for a given pixel, the program randomly takes several samples of the pixel and sends rays through these samples. The colors of these rays are then averaged. With this computation, the edges of the objects are blended.</li>
-  <li>Implemented different materials: diffuse, metal and dielectrics.</li>
-  <li>A positionable camera.</li>
-</ul>
-
-<p><img src="/assets/ray_tracing.png" alt="Result of the project" class="center-image" /></p>
-
-<p>I will continue with this project adding more objects (like planes, cubes…), adding lights and reading the next book.</p>
-
+    <p><a href="https://lazaro92.github.io/summer-2020-project-ray-tracer">Read more...</a></p>
   </div>
   
 </div>

@@ -881,6 +881,40 @@ a.sidebar-nav-item:focus {
   transform: translateX(14rem); }
 
 /*
+ * Tags
+ */
+ul.tags {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  list-style-type: none; }
+
+.tags li {
+  float: left; }
+
+.tag {
+  font: 15px/1.5 'PT Sans', serif;
+  background: #767676;
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 10px 0 10px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s; }
+
+.tag-archive-font {
+  font-size: 13px; }
+
+.tag:hover {
+  background-color: #b2b356;
+  color: white;
+  text-decoration: none; }
+
+/*
  * Posts and pages
  *
  * Each post is wrapped in `.post` and is used on default and post layouts. Each
